@@ -38,6 +38,7 @@ body{
 
     
     var today = new Date();
+    dateFormat(now, "dddd, mmmm dS, yyyy");
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
