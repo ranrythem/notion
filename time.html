@@ -3,11 +3,11 @@
     <title>Greeting Message</title> 
     <style>
 #lbl {
-    font-family: monospace;
+    font-family: sans-serif;
     font-size: xx-large;
     color: #626262;
     padding: 5px;
-    border: 1px solid #ececec;
+    border: 0px solid #ececec;
     text-align: center;
     line-height: 1.5;
     height:85%
@@ -18,7 +18,7 @@
     font-size:large;
 }
 body{
-    background-color: aliceblue;
+    background-color: white;
 }
     </style>
 </head>
@@ -52,6 +52,6 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
+        greet+=`<div id="date"> Today is ${date}</div>`;
 </script> 
 </html>
