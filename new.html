@@ -84,11 +84,6 @@ h1 {
 </div>
 
 <script>
-
-        function date() {
-var today = new Date();
-document.getElementById('date').innerHTML = today.toDateString();
-}
  
 function dispalyGreetings(today){
         hrs = today.getHours();
@@ -110,7 +105,14 @@ function dispalyGreetings(today){
   "July", "August", "September", "October", "November", "December"
 ];
 // console.log(today.toLocaleTimeString());
+ 
+        function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+    }
 
+    dispalyWidget()
     }
 
 </script>
