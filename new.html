@@ -106,20 +106,27 @@ function dispalyGreetings(today){
 ];
 
         var dayName = days[today.getDay()];
-        var monthName = monthNames[today.getM()];
+        var monthName = monthNames[today.getMonth()];
         var date = today.getDate();
-        var year = today.getYear();
+        var year = today.getFullYear();
         document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
 
- 
-        function dispalyWidget() {
+    }
+
+    function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
         var today = new Date();
         dispalyGreetings(today);
         dispalyDate(today);
     }
 
     dispalyWidget()
-    }
 
 </script>
 
