@@ -17,6 +17,10 @@
         .widget {
             padding: 5px 5px ;
             color: #000000;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction: column;
             line-height: 1.5;
             height: 60%
 
@@ -53,6 +57,7 @@
     <div class="widget">
 
             <div class="greet" id="greet"</div> 
+                
                 <div class="date" id="date"></div>
            
 
@@ -101,7 +106,7 @@ function dispalyGreetings(today){
 
     function dispalyWidget() {
         var today = new Date();
-        dispalyGreetings(today); dispalyDate(today);
+        dispalyGreetings(today), dispalyDate(today);
     }
 
     dispalyWidget()
