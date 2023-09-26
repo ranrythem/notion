@@ -104,7 +104,13 @@ function dispalyGreetings(today){
         const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
-// console.log(today.toLocaleTimeString());
+
+        var dayName = days[today.getDay()];
+        var monthName = monthNames[today.getM()];
+        var date = today.getDate();
+        var year = today.getYear();
+        document.getElementById('date').innerHTML =dayName+", "+monthName+" "+date+" "+year;
+
  
         function dispalyWidget() {
         var today = new Date();
