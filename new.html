@@ -73,6 +73,11 @@ h1 {
     font-size: 2em;
 
 }
+
+.time {
+    display: inline;
+    min-width: 37px;
+}
         
     </style>
 </head>
@@ -120,18 +125,6 @@ function dispalyGreetings(today){
 
     }
 
-    function padZeros(num) {
-        if (num < 10) {
-            num = '0' + num
-        };
-        return num;
-    }
-
-    function dispalyWidget() {
-        var today = new Date();
-        dispalyGreetings(today);
-        dispalyDate(today);
-    }
     
     function clock() {
 var today = new Date();
@@ -144,7 +137,42 @@ if(today.getHours() >=12){
 else{
     seconds+=" am"
 }
+        
 
+        function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+        document.getElementById('hour').innerHTML = hour;
+document.getElementById('min').innerHTML = minutes;
+document.getElementById('sec').innerHTML = seconds;
+    }
+        function twelveHour(hour) {
+if (hour > 12) {
+    return hour -= 12 
+} else if (hour === 0) {
+    return hour = 12;
+} else {
+    return hour
+}
+}
+    
+// adds zero infront of single digit number
+function zeros(num) {
+if (num < 10) {
+    num = '0' + num
+};
+return num;
+}
+
+        
     dispalyWidget()
 
 </script>
