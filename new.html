@@ -25,15 +25,16 @@ h1 {
 
 /*CSS START*/
 
-        .widget {
-            padding: 5px 5px ;
-            color: #000000;
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            flex-direction: column;
-            max-width: 95%;
-            margin: auto;
+.full-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
        
 .card {
@@ -92,8 +93,8 @@ h1 {
 <body>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto:400,700" rel="stylesheet">
 
-<div class="container>">
-  <div class="widget">
+<div class="full-table">
+  <div class="table-cell">
     
     <div class="card">
         <div class="greet" id="greet"></div>
