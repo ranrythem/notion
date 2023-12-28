@@ -137,24 +137,8 @@ if(today.getHours() >=12){
 else{
     seconds+=" am"
 }
-        
 
-        function padZeros(num) {
-        if (num < 10) {
-            num = '0' + num
-        };
-        return num;
-    }
-
-    function dispalyWidget() {
-        var today = new Date();
-        dispalyGreetings(today);
-        dispalyDate(today);
-        document.getElementById('hour').innerHTML = hour;
-document.getElementById('min').innerHTML = minutes;
-document.getElementById('sec').innerHTML = seconds;
-    }
-        function twelveHour(hour) {
+                function twelveHour(hour) {
 if (hour > 12) {
     return hour -= 12 
 } else if (hour === 0) {
@@ -171,6 +155,22 @@ if (num < 10) {
 };
 return num;
 }
+
+        function padZeros(num) {
+        if (num < 10) {
+            num = '0' + num
+        };
+        return num;
+    }
+
+    function dispalyWidget() {
+        var today = new Date();
+        dispalyGreetings(today);
+        dispalyDate(today);
+        document.getElementById('hour').innerHTML = hour;
+document.getElementById('min').innerHTML = minutes;
+document.getElementById('sec').innerHTML = seconds;
+    }
 
         
     dispalyWidget()
