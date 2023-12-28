@@ -66,7 +66,14 @@ h1 {
     color: #474747;
     padding-right: 5px;
 }
+        
+.clock {
+    display: inline;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2em;
 
+}
+        
     </style>
 </head>
 <body>
@@ -125,6 +132,18 @@ function dispalyGreetings(today){
         dispalyGreetings(today);
         dispalyDate(today);
     }
+    
+    function clock() {
+var today = new Date();
+var hour = zeros(twelveHour(today.getHours()));
+var minutes = zeros(today.getMinutes());
+var seconds = zeros(today.getSeconds());
+if(today.getHours() >=12){
+    seconds+=" pm"
+}
+else{
+    seconds+=" am"
+}
 
     dispalyWidget()
 
