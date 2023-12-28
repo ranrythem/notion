@@ -72,7 +72,7 @@ h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 2em;
     color: #474747;
-    /* padding-left: 20px; */
+    min-width: 20px; 
 
 }
 
@@ -116,11 +116,11 @@ function dispalyGreetings(today){
         hrs = today.getHours();
         name="  Today is"
         if (hrs < 12)
-            greet = 'Morning,  '+name;
+            greet = 'Morning 🌻,  '+name;
         else if (hrs >= 12 && hrs <= 17)
-            greet = 'Afternoon, '+name;
+            greet = 'Afternoon 💚, '+name;
         else if (hrs >= 17 && hrs <= 24)
-            greet = 'Evening,  '+name;
+            greet = 'Evening 😊,  '+name;
         document.getElementById('greet').innerHTML = greet;
 
     }
