@@ -90,6 +90,12 @@ h1 {
     <div class="card">
         <div class="greet" id="greet"></div>
       <div class="date" id="date"></div>
+        <div class="clock">
+                    <div class="time" id="hour"></div>
+                    <div class="colon">:</div>
+                    <div class="time" id="min"></div>
+                    <div class="colon">:</div>
+                    <div class="time" id="sec"></div>
     </div>
     
   </div>
@@ -126,50 +132,46 @@ function dispalyGreetings(today){
     }
 
     
-    function clock() {
-var today = new Date();
-var hour = zeros(twelveHour(today.getHours()));
-var minutes = zeros(today.getMinutes());
-var seconds = zeros(today.getSeconds());
-if(today.getHours() >=12){
-    seconds+=" pm"
-}
-else{
-    seconds+=" am"
-}
+   function dispalyClock(today) {
 
-                function twelveHour(hour) {
-if (hour > 12) {
-    return hour -= 12 
-} else if (hour === 0) {
-    return hour = 12;
-} else {
-    return hour
-}
-}
-    
-// adds zero infront of single digit number
-function zeros(num) {
-if (num < 10) {
-    num = '0' + num
-};
-return num;
-}
+        var hour = padZeros(twelveHour(today.getHours()));
+        var minutes = padZeros(today.getMinutes());
+        var seconds = padZeros(today.getSeconds());
+       
+        if(today.getHours() >=12){
+            seconds+=" pm"
+        }
+        else{
+            seconds+=" am"
+        }
+       
+        document.getElementById('hour').innerHTML = hour;
+        document.getElementById('min').innerHTML = minutes;
+        document.getElementById('sec').innerHTML = seconds;
+    }
 
-        function padZeros(num) {
+    function twelveHour(hour) {
+        if (hour > 12) {
+            return hour -= 12
+        } else if (hour === 0) {
+            return hour = 12;
+        } else {
+            return hour
+        }
+    }
+    function padZeros(num) {
         if (num < 10) {
             num = '0' + num
         };
         return num;
     }
-
+    
     function dispalyWidget() {
         var today = new Date();
         dispalyGreetings(today);
         dispalyDate(today);
-        document.getElementById('hour').innerHTML = hour;
-document.getElementById('min').innerHTML = minutes;
-document.getElementById('sec').innerHTML = seconds;
+        dispalyClock(today);
+        setTimeout(dispalyWidget, 500);
     }
 
         
